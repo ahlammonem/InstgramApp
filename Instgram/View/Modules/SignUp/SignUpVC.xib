@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="Instgram" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="JjW-9w-pnO" id="69X-Te-8an"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JjW-9w-pnO">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kQt-DI-f79">
+                    <rect key="frame" x="59" y="199" width="275" height="67"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="67" id="PBw-g6-BKN"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="hyR-BI-eYX">
+                    <rect key="frame" x="30" y="397.33333333333331" width="333" height="102"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2o0-eJ-a7L">
+                            <rect key="frame" x="0.0" y="0.0" width="333" height="42"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="4XY-z8-8Cp">
+                                    <rect key="frame" x="85.333333333333329" y="11" width="162.66666666666669" height="20"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_icon" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-pj-W79">
+                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Facebook " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJA-Zh-ssK">
+                                            <rect key="frame" x="23.000000000000014" y="0.0" width="139.66666666666669" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <constraints>
+                                <constraint firstItem="4XY-z8-8Cp" firstAttribute="centerY" secondItem="2o0-eJ-a7L" secondAttribute="centerY" id="Cy0-JS-EPD"/>
+                                <constraint firstAttribute="height" constant="42" id="yHx-x9-GrG"/>
+                                <constraint firstItem="4XY-z8-8Cp" firstAttribute="centerX" secondItem="2o0-eJ-a7L" secondAttribute="centerX" id="yyg-qq-OwI"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3I-YW-fhD">
+                            <rect key="frame" x="0.0" y="60" width="333" height="42"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gPM-md-U0j">
+                                    <rect key="frame" x="92.333333333333329" y="11" width="148.33333333333337" height="20"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google_icon" translatesAutoresizingMaskIntoConstraints="NO" id="JmS-vE-cY7">
+                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Google " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acc-01-Y1h">
+                                            <rect key="frame" x="23.000000000000021" y="0.0" width="125.33333333333331" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            <constraints>
+                                <constraint firstItem="gPM-md-U0j" firstAttribute="centerY" secondItem="S3I-YW-fhD" secondAttribute="centerY" id="EdV-FG-cSh"/>
+                                <constraint firstItem="gPM-md-U0j" firstAttribute="centerX" secondItem="S3I-YW-fhD" secondAttribute="centerX" id="rSt-P0-diU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to see photos, videos and reels from your friends." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBn-Ul-f9a">
+                    <rect key="frame" x="59" y="316" width="275" height="31.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="jhO-E8-6Bf"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="PBn-Ul-f9a" firstAttribute="trailing" secondItem="kQt-DI-f79" secondAttribute="trailing" id="180-cC-J2g"/>
+                <constraint firstItem="kQt-DI-f79" firstAttribute="width" secondItem="JjW-9w-pnO" secondAttribute="width" multiplier="0.7" id="7ok-7Z-wE4"/>
+                <constraint firstItem="PBn-Ul-f9a" firstAttribute="top" secondItem="kQt-DI-f79" secondAttribute="bottom" constant="50" id="BRz-Uw-wbf"/>
+                <constraint firstItem="jhO-E8-6Bf" firstAttribute="trailing" secondItem="hyR-BI-eYX" secondAttribute="trailing" constant="30" id="LXc-PV-aBo"/>
+                <constraint firstItem="kQt-DI-f79" firstAttribute="top" secondItem="jhO-E8-6Bf" secondAttribute="top" constant="140" id="Mow-vp-Adn"/>
+                <constraint firstItem="hyR-BI-eYX" firstAttribute="leading" secondItem="jhO-E8-6Bf" secondAttribute="leading" constant="30" id="Tp3-2U-6ck"/>
+                <constraint firstItem="PBn-Ul-f9a" firstAttribute="leading" secondItem="kQt-DI-f79" secondAttribute="leading" id="Yzx-Tb-yvi"/>
+                <constraint firstItem="kQt-DI-f79" firstAttribute="centerX" secondItem="jhO-E8-6Bf" secondAttribute="centerX" id="a8l-DI-2wE"/>
+                <constraint firstItem="hyR-BI-eYX" firstAttribute="top" secondItem="PBn-Ul-f9a" secondAttribute="bottom" constant="50" id="vkc-Yk-UgS"/>
+                <constraint firstItem="hyR-BI-eYX" firstAttribute="centerX" secondItem="jhO-E8-6Bf" secondAttribute="centerX" id="vnR-i4-gpZ"/>
+            </constraints>
+            <point key="canvasLocation" x="139.69465648854961" y="15.492957746478874"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_logo" width="422" height="151"/>
+        <image name="facebook_icon" width="20" height="20"/>
+        <image name="google_icon" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
