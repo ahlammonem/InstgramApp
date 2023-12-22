@@ -9,9 +9,13 @@ import UIKit
 import GoogleSignIn
 import FirebaseAuth
 import FirebaseCore
+import FirebaseDatabase
 
 class IntroVC: NibVC {
     
+  
+    
+    //MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +23,7 @@ class IntroVC: NibVC {
     }
     
     
-    
+    //MARK: BUTTONS CLICKS
     @IBAction private func signUpButtonDidPressed(_ sender: UIButton) {
         let vc = SignUpVC()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -30,11 +34,11 @@ class IntroVC: NibVC {
         self.presentHome()
     }
     
-    @IBAction private func loginWithGoogleDidPressed(_ sender: UIButton) {
-        
+    @IBAction private func loginWithGoogleDidPressed(_ sender: UIButton){
         self.signInWithGoogle()
-        
     }
+    
+    
     
     
     
@@ -55,12 +59,41 @@ class IntroVC: NibVC {
         // Start the sign in flow!
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
             guard error == nil else {return}
-
-          guard let user = result?.user,
-            let idToken = user.idToken?.tokenString else {return}
-
+            
+            guard let user = result?.user,
+                  let idToken = user.idToken?.tokenString else {return}
+            
             let credential = GoogleAuthProvider.credential(withIDToken: idToken,accessToken: user.accessToken.tokenString)
+            
+            
+            
+            Auth.auth().signIn(with: credential) { result, error in
+               
+                guard let result = result  else {return}
+                print(result)
+                let id        = result.user.uid
+                let profile   = result.additionalUserInfo?.profile
+                let name      = profile?["name"] as? String ?? ""
+                let email     =  profile?["email"] as? String ?? ""
+                let imageUrl  = result.user.photoURL?.absoluteString ?? ""
+               
+                self.saveUserData(id: id, name: name , email:  email, imageUrl: imageUrl)
+            }
+            
         }
+    }
+    
+    
+    private func saveUserData(id: String , name: String , email:String, imageUrl: String?){
+        
+        let ref = Database.database().reference()
+        ref.child("Users").child(id).setValue(
+            ["id":id,
+             "name":name,
+             "email":email,
+             "imageUrl" : imageUrl
+            ])
+        
     }
     
     

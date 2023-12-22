@@ -39,8 +39,6 @@ class NavBarVC : UINavigationController {
                                               
         ]
         
-        
-        
         //remove back text
         let BarButtonItemAppearance = UIBarButtonItem.appearance()
          

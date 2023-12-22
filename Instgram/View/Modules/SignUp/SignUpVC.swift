@@ -13,6 +13,7 @@ class SignUpVC: NibVC {
         super.viewDidLoad()
 
         self.title = "Sign Up"
+        
     }
 
 

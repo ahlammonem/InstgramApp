@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,6 +49,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="260" height="42"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="loginWithFaceBookButtonDidPressed:" destination="-1" eventType="touchUpInside" id="BVU-a6-YGO"/>
                                     </connections>
@@ -63,6 +69,11 @@
                                 <constraint firstAttribute="height" constant="42" id="r0h-bs-2XI"/>
                                 <constraint firstAttribute="trailing" secondItem="3BK-YQ-5kw" secondAttribute="trailing" id="xde-zW-C5l"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84K-BH-3Kp">
                             <rect key="frame" x="0.0" y="60" width="260" height="42"/>
@@ -85,6 +96,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="260" height="42"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="loginWithGoogleDidPressed:" destination="-1" eventType="touchUpInside" id="Fvs-SQ-Pwy"/>
                                     </connections>
@@ -99,6 +115,11 @@
                                 <constraint firstItem="3Dk-B4-aSp" firstAttribute="top" secondItem="84K-BH-3Kp" secondAttribute="top" id="rHO-qe-goE"/>
                                 <constraint firstAttribute="bottom" secondItem="3Dk-B4-aSp" secondAttribute="bottom" id="tVu-ds-w76"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                 </stackView>
@@ -125,10 +146,10 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip2-jc-OtT">
-                    <rect key="frame" x="0.0" y="480.5" width="320" height="1"/>
-                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                    <rect key="frame" x="0.0" y="481" width="320" height="0.5"/>
+                    <color key="backgroundColor" name="gray"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="2Mw-3R-IqH"/>
+                        <constraint firstAttribute="height" constant="0.5" id="2Mw-3R-IqH"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to see photos, videos and reels from your friends." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCe-O2-TXa">
@@ -137,6 +158,21 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yak-UF-WjD">
+                    <rect key="frame" x="126.5" y="8" width="67.5" height="18"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dh-vb-glv">
+                            <rect key="frame" x="0.0" y="0.0" width="49.5" height="18"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" name="gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_down_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="FzA-op-0Qe">
+                            <rect key="frame" x="57.5" y="0.0" width="10" height="18"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -149,7 +185,9 @@
                 <constraint firstItem="yby-Ke-e1i" firstAttribute="top" secondItem="ip2-jc-OtT" secondAttribute="bottom" constant="18" id="Srw-Kp-pGV"/>
                 <constraint firstItem="44A-NM-xbu" firstAttribute="top" secondItem="DCe-O2-TXa" secondAttribute="bottom" constant="50" id="UVV-bK-3LG"/>
                 <constraint firstAttribute="trailing" secondItem="ip2-jc-OtT" secondAttribute="trailing" id="V9o-uo-PGS"/>
+                <constraint firstItem="yak-UF-WjD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="b5n-8D-YeP"/>
                 <constraint firstItem="DCe-O2-TXa" firstAttribute="trailing" secondItem="K8P-NR-02L" secondAttribute="trailing" id="ekL-QJ-2P7"/>
+                <constraint firstItem="yak-UF-WjD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kVC-M7-BVB"/>
                 <constraint firstItem="yby-Ke-e1i" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mbr-RZ-QAr"/>
                 <constraint firstItem="K8P-NR-02L" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="o36-YS-BLR"/>
                 <constraint firstItem="K8P-NR-02L" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="s0g-ym-NsT"/>
@@ -157,13 +195,17 @@
                 <constraint firstItem="DCe-O2-TXa" firstAttribute="leading" secondItem="K8P-NR-02L" secondAttribute="leading" id="wOW-Pl-Dvd"/>
                 <constraint firstItem="44A-NM-xbu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="wmN-bl-N2m"/>
             </constraints>
-            <point key="canvasLocation" x="139.69465648854961" y="15.492957746478874"/>
+            <point key="canvasLocation" x="198.75" y="92.957746478873247"/>
         </view>
     </objects>
     <resources>
         <image name="app_logo" width="422" height="151"/>
         <image name="facebook_icon" width="20" height="20"/>
         <image name="google_icon" width="20" height="20"/>
+        <image name="ic_down_arrow" width="10" height="6"/>
+        <namedColor name="gray">
+            <color red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -175,9 +217,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

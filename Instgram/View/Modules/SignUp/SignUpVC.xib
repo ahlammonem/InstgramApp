@@ -51,6 +51,11 @@
                                 <constraint firstAttribute="height" constant="42" id="yHx-x9-GrG"/>
                                 <constraint firstItem="4XY-z8-8Cp" firstAttribute="centerX" secondItem="2o0-eJ-a7L" secondAttribute="centerX" id="yyg-qq-OwI"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3I-YW-fhD">
                             <rect key="frame" x="0.0" y="60" width="333" height="42"/>
@@ -75,6 +80,11 @@
                                 <constraint firstItem="gPM-md-U0j" firstAttribute="centerY" secondItem="S3I-YW-fhD" secondAttribute="centerY" id="EdV-FG-cSh"/>
                                 <constraint firstItem="gPM-md-U0j" firstAttribute="centerX" secondItem="S3I-YW-fhD" secondAttribute="centerX" id="rSt-P0-diU"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                 </stackView>
