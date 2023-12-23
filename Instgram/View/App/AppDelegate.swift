@@ -9,6 +9,8 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
+import FacebookCore
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,12 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    //TO ALLOW THE APP TO OPEN GOOGLE URL
-    func application(_ app: UIApplication,
-                     open url: URL,
-                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-      return GIDSignIn.sharedInstance.handle(url)
+    func application(_ app: UIApplication, open url: URL, options:[UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let googleHandled = GIDSignIn.sharedInstance.handle(url)
+        let facebookHandled = ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[.sourceApplication] as? String, annotation: options[.annotation])
+
+        return googleHandled || facebookHandled
     }
+    
+//    func application(_ app: UIApplication, open url: URL, options:[UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        let handled: Bool = ApplicationDelegate.shared.application(app, open: url, sourceApplication: options[.sourceApplication] as? String, annotation: options[.annotation])
+//        return handled
+//    }
+//
+//    //TO ALLOW THE APP TO OPEN GOOGLE URL
+//    func application(_ app: UIApplication,
+//                     open url: URL,
+//                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+//      return GIDSignIn.sharedInstance.handle(url)
+//    }
 
     // MARK: UISceneSession Lifecycle
 
