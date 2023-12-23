@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,22 +20,61 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l3r-Bq-Ude">
-                    <rect key="frame" x="0.0" y="59" width="375" height="608"/>
+                    <rect key="frame" x="0.0" y="53" width="375" height="614"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="95" translatesAutoresizingMaskIntoConstraints="NO" id="wCM-b1-zaJ">
+                    <rect key="frame" x="16" y="0.0" width="343" height="35"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_logo" translatesAutoresizingMaskIntoConstraints="NO" id="f2k-CR-rzD">
+                            <rect key="frame" x="0.0" y="0.0" width="123" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="AVR-dg-47x"/>
+                                <constraint firstAttribute="width" constant="123" id="fr7-kU-2Pa"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="v9i-ZN-TJ7">
+                            <rect key="frame" x="218" y="0.0" width="125" height="35"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vg-X0-tpY">
+                                    <rect key="frame" x="0.0" y="0.0" width="25" height="35"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="ic_add"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0O-nI-Qry">
+                                    <rect key="frame" x="50" y="0.0" width="25" height="35"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="ic_like"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-Lv-pu4">
+                                    <rect key="frame" x="100" y="0.0" width="25" height="35"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="ic_message"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="l3r-Bq-Ude" secondAttribute="bottom" id="H7L-ic-Jwx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wCM-b1-zaJ" secondAttribute="trailing" constant="16" id="KAT-uz-8wm"/>
+                <constraint firstItem="l3r-Bq-Ude" firstAttribute="top" secondItem="wCM-b1-zaJ" secondAttribute="bottom" constant="18" id="Sfc-YS-39S"/>
+                <constraint firstItem="wCM-b1-zaJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Vnl-sK-kNA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="l3r-Bq-Ude" secondAttribute="trailing" id="XYn-sk-GBG"/>
                 <constraint firstItem="l3r-Bq-Ude" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bBW-kh-7xO"/>
-                <constraint firstItem="l3r-Bq-Ude" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fBK-hE-GVZ"/>
+                <constraint firstItem="wCM-b1-zaJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dXz-I3-P63"/>
             </constraints>
             <point key="canvasLocation" x="49.618320610687022" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <image name="app_logo" width="422" height="151"/>
+        <image name="ic_add" width="22" height="22"/>
+        <image name="ic_like" width="23" height="19"/>
+        <image name="ic_message" width="22" height="22"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -20,8 +20,25 @@ class HomeVC: NibVC {
         super.viewDidLoad()
 
         setUpTable()
-        self.title = "Home"
+     
+
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    
+      navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
+    
+   
+    
+    
+    
+    
 
 
 }

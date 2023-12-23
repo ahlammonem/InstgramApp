@@ -24,7 +24,7 @@ class TabBarVC: UITabBarController {
        
         tabBar.tintColor = .black
         tabBar.unselectedItemTintColor = .black
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = .clear
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,21 +37,21 @@ class TabBarVC: UITabBarController {
         let tabHome = UITabBarItem(
             title: "Home",
             image: UIImage(named: "ic_home"),
-            selectedImage: UIImage(named: "ic_home"))
+            selectedImage: UIImage(named: "ic_home_selected"))
         
         itemHome.tabBarItem = tabHome
         
-//        // Profile
-//        let itemProfile = NavBarVC(
-//            rootViewController: ProfileVC())
-//
-//        let tabProfile = UITabBarItem(
-//            title: "Profile",
-//            image: UIImage(named: "ic_profile"),
-//            selectedImage: UIImage(named: "ic_profile"))
-//
-//        itemProfile.tabBarItem = tabProfile
+        // Profile
+        let itemProfile = NavBarVC(
+            rootViewController: MyprofileVC())
+
+        let tabProfile = UITabBarItem(
+            title: "Profile",
+            image: UIImage(named: "ic_profile"),
+            selectedImage: UIImage(named: "ic_profile_selected"))
+
+        itemProfile.tabBarItem = tabProfile
         
-        viewControllers = [itemHome]
+        viewControllers = [itemHome , itemProfile]
     }
 }

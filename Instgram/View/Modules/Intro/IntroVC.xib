@@ -159,7 +159,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yak-UF-WjD">
-                    <rect key="frame" x="126.5" y="8" width="67.5" height="18"/>
+                    <rect key="frame" x="126.5" y="0.0" width="67.5" height="18"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dh-vb-glv">
                             <rect key="frame" x="0.0" y="0.0" width="49.5" height="18"/>
@@ -185,7 +185,7 @@
                 <constraint firstItem="yby-Ke-e1i" firstAttribute="top" secondItem="ip2-jc-OtT" secondAttribute="bottom" constant="18" id="Srw-Kp-pGV"/>
                 <constraint firstItem="44A-NM-xbu" firstAttribute="top" secondItem="DCe-O2-TXa" secondAttribute="bottom" constant="50" id="UVV-bK-3LG"/>
                 <constraint firstAttribute="trailing" secondItem="ip2-jc-OtT" secondAttribute="trailing" id="V9o-uo-PGS"/>
-                <constraint firstItem="yak-UF-WjD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="b5n-8D-YeP"/>
+                <constraint firstItem="yak-UF-WjD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="b5n-8D-YeP"/>
                 <constraint firstItem="DCe-O2-TXa" firstAttribute="trailing" secondItem="K8P-NR-02L" secondAttribute="trailing" id="ekL-QJ-2P7"/>
                 <constraint firstItem="yak-UF-WjD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kVC-M7-BVB"/>
                 <constraint firstItem="yby-Ke-e1i" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mbr-RZ-QAr"/>

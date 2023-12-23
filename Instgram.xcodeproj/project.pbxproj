@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0C29CEF32B35D19D0022D550 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C29CEF12B35D19D0022D550 /* SignUpVC.swift */; };
 		0C29CEF42B35D19D0022D550 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C29CEF22B35D19D0022D550 /* SignUpVC.xib */; };
-		0C29CEF82B35DBB00022D550 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C29CEF62B35DBB00022D550 /* UserProfileVC.swift */; };
-		0C29CEF92B35DBB00022D550 /* UserProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C29CEF72B35DBB00022D550 /* UserProfileVC.xib */; };
 		0C29CEFB2B35DD7E0022D550 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C29CEFA2B35DD7E0022D550 /* GoogleService-Info.plist */; };
 		0C29CF0A2B35DF8F0022D550 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 0C29CF092B35DF8F0022D550 /* GoogleSignIn */; };
 		0C29CF0C2B35DF8F0022D550 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0C29CF0B2B35DF8F0022D550 /* GoogleSignInSwift */; };
@@ -29,6 +27,8 @@
 		0C29CF2A2B35FC4D0022D550 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C29CF292B35FC4D0022D550 /* FirebaseAnalytics */; };
 		0C48DD172B3710CA00874E56 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C48DD152B3710CA00874E56 /* GalleryCell.swift */; };
 		0C48DD182B3710CA00874E56 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C48DD162B3710CA00874E56 /* GalleryCell.xib */; };
+		0C48DD1F2B372E6F00874E56 /* MyprofileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C48DD1D2B372E6F00874E56 /* MyprofileVC.swift */; };
+		0C48DD202B372E6F00874E56 /* MyprofileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C48DD1E2B372E6F00874E56 /* MyprofileVC.xib */; };
 		0CA983812B30CB42006E289B /* UIView + Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA983802B30CB42006E289B /* UIView + Corners.swift */; };
 		0CA983852B30CCF1006E289B /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA983832B30CCF1006E289B /* PostCell.swift */; };
 		0CA983862B30CCF1006E289B /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA983842B30CCF1006E289B /* PostCell.xib */; };
@@ -59,11 +59,11 @@
 /* Begin PBXFileReference section */
 		0C29CEF12B35D19D0022D550 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		0C29CEF22B35D19D0022D550 /* SignUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
-		0C29CEF62B35DBB00022D550 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
-		0C29CEF72B35DBB00022D550 /* UserProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileVC.xib; sourceTree = "<group>"; };
 		0C29CEFA2B35DD7E0022D550 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Instgram/View/Resourses/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0C48DD152B3710CA00874E56 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		0C48DD162B3710CA00874E56 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
+		0C48DD1D2B372E6F00874E56 /* MyprofileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileVC.swift; sourceTree = "<group>"; };
+		0C48DD1E2B372E6F00874E56 /* MyprofileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyprofileVC.xib; sourceTree = "<group>"; };
 		0CA983802B30CB42006E289B /* UIView + Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Corners.swift"; sourceTree = "<group>"; };
 		0CA983832B30CCF1006E289B /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		0CA983842B30CCF1006E289B /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
@@ -128,15 +128,6 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		0C29CEF52B35DB940022D550 /* UserProfile */ = {
-			isa = PBXGroup;
-			children = (
-				0C29CEF62B35DBB00022D550 /* UserProfileVC.swift */,
-				0C29CEF72B35DBB00022D550 /* UserProfileVC.xib */,
-			);
-			path = UserProfile;
-			sourceTree = "<group>";
-		};
 		0C29CF072B35DEDF0022D550 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +159,15 @@
 				0C48DD162B3710CA00874E56 /* GalleryCell.xib */,
 			);
 			path = GalleryCell;
+			sourceTree = "<group>";
+		};
+		0C48DD1C2B372E4E00874E56 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				0C48DD1D2B372E6F00874E56 /* MyprofileVC.swift */,
+				0C48DD1E2B372E6F00874E56 /* MyprofileVC.xib */,
+			);
+			path = MyProfile;
 			sourceTree = "<group>";
 		};
 		0CA983822B30CCC3006E289B /* PostCell */ = {
@@ -250,13 +250,13 @@
 		0CE063BC2B278E5E002D50A8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0C48DD1C2B372E4E00874E56 /* MyProfile */,
 				0C29CF072B35DEDF0022D550 /* Launch */,
 				0CE063BD2B278E66002D50A8 /* Splash */,
 				0CE063BF2B278E86002D50A8 /* Intro */,
 				0C29CEF02B35D1310022D550 /* SignUp */,
 				0CE063C62B279057002D50A8 /* Profile */,
 				0CE063BE2B278E74002D50A8 /* Home */,
-				0C29CEF52B35DB940022D550 /* UserProfile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -404,12 +404,12 @@
 				0CDA5EC82B238A7A009DB729 /* LaunchScreen.storyboard in Resources */,
 				0C29CEF42B35D19D0022D550 /* SignUpVC.xib in Resources */,
 				0CDA5EDF2B239299009DB729 /* HomeVC.xib in Resources */,
+				0C48DD202B372E6F00874E56 /* MyprofileVC.xib in Resources */,
 				0CDA5ED72B238B11009DB729 /* SplashVC.xib in Resources */,
 				0C29CEFB2B35DD7E0022D550 /* GoogleService-Info.plist in Resources */,
 				0CA983862B30CCF1006E289B /* PostCell.xib in Resources */,
 				0CE063CB2B27942E002D50A8 /* StoryCell.xib in Resources */,
 				0CDA5EC52B238A7A009DB729 /* Assets.xcassets in Resources */,
-				0C29CEF92B35DBB00022D550 /* UserProfileVC.xib in Resources */,
 				0CE063C52B279053002D50A8 /* ProfileVC.xib in Resources */,
 				0CDA5EDB2B238BF4009DB729 /* IntroVC.xib in Resources */,
 			);
@@ -427,9 +427,9 @@
 				0CA983852B30CCF1006E289B /* PostCell.swift in Sources */,
 				0CE063BB2B278B81002D50A8 /* NavBarVC.swift in Sources */,
 				0CA9838E2B30D3DA006E289B /* Story.swift in Sources */,
-				0C29CEF82B35DBB00022D550 /* UserProfileVC.swift in Sources */,
 				0CDA5ED62B238B11009DB729 /* SplashVC.swift in Sources */,
 				0CDA5EDE2B239299009DB729 /* HomeVC.swift in Sources */,
+				0C48DD1F2B372E6F00874E56 /* MyprofileVC.swift in Sources */,
 				0CDA5EBC2B238A79009DB729 /* AppDelegate.swift in Sources */,
 				0CE063C12B278EF3002D50A8 /* RootRouter.swift in Sources */,
 				0CDA5EBE2B238A79009DB729 /* SceneDelegate.swift in Sources */,

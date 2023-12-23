@@ -13,7 +13,8 @@ class ProfileVC: NibVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+       
         self.title = "wallpapers4k"
         setUpGalleryCollection()
     }
