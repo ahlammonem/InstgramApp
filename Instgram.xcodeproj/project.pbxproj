@@ -27,6 +27,8 @@
 		0C29CF252B35FA540022D550 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0C29CF242B35FA540022D550 /* FacebookLogin */; };
 		0C29CF272B35FA540022D550 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 0C29CF262B35FA540022D550 /* FacebookShare */; };
 		0C29CF2A2B35FC4D0022D550 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C29CF292B35FC4D0022D550 /* FirebaseAnalytics */; };
+		0C48DD172B3710CA00874E56 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C48DD152B3710CA00874E56 /* GalleryCell.swift */; };
+		0C48DD182B3710CA00874E56 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C48DD162B3710CA00874E56 /* GalleryCell.xib */; };
 		0CA983812B30CB42006E289B /* UIView + Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA983802B30CB42006E289B /* UIView + Corners.swift */; };
 		0CA983852B30CCF1006E289B /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA983832B30CCF1006E289B /* PostCell.swift */; };
 		0CA983862B30CCF1006E289B /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA983842B30CCF1006E289B /* PostCell.xib */; };
@@ -60,6 +62,8 @@
 		0C29CEF62B35DBB00022D550 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		0C29CEF72B35DBB00022D550 /* UserProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileVC.xib; sourceTree = "<group>"; };
 		0C29CEFA2B35DD7E0022D550 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Instgram/View/Resourses/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0C48DD152B3710CA00874E56 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		0C48DD162B3710CA00874E56 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
 		0CA983802B30CB42006E289B /* UIView + Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Corners.swift"; sourceTree = "<group>"; };
 		0CA983832B30CCF1006E289B /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		0CA983842B30CCF1006E289B /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
@@ -155,6 +159,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C48DD142B3710A300874E56 /* GalleryCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C48DD152B3710CA00874E56 /* GalleryCell.swift */,
+				0C48DD162B3710CA00874E56 /* GalleryCell.xib */,
+			);
+			path = GalleryCell;
 			sourceTree = "<group>";
 		};
 		0CA983822B30CCC3006E289B /* PostCell */ = {
@@ -281,6 +294,7 @@
 		0CE063C62B279057002D50A8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				0C48DD142B3710A300874E56 /* GalleryCell */,
 				0CE063C32B279053002D50A8 /* ProfileVC.xib */,
 				0CE063C22B279053002D50A8 /* ProfileVC.swift */,
 			);
@@ -385,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C48DD182B3710CA00874E56 /* GalleryCell.xib in Resources */,
 				0CA9838B2B30D2DE006E289B /* StoriesCell.xib in Resources */,
 				0CDA5EC82B238A7A009DB729 /* LaunchScreen.storyboard in Resources */,
 				0C29CEF42B35D19D0022D550 /* SignUpVC.xib in Resources */,
@@ -422,6 +437,7 @@
 				0CA983902B30D5B2006E289B /* Post.swift in Sources */,
 				0CE063B92B278B53002D50A8 /* TabBarVC.swift in Sources */,
 				0CE063C42B279053002D50A8 /* ProfileVC.swift in Sources */,
+				0C48DD172B3710CA00874E56 /* GalleryCell.swift in Sources */,
 				0CE063CA2B27942E002D50A8 /* StoryCell.swift in Sources */,
 				0CE063B72B278AA2002D50A8 /* NibVC.swift in Sources */,
 				0C29CEF32B35D19D0022D550 /* SignUpVC.swift in Sources */,

@@ -21,6 +21,7 @@ class SplashVC: UIViewController {
     }
     
     private func presentHome() {
+        
         let tabBar = TabBarVC()
         RootRouter.presentRootScreen(with: tabBar)
      }

@@ -20,6 +20,7 @@ class HomeVC: NibVC {
         super.viewDidLoad()
 
         setUpTable()
+        self.title = "Home"
     }
 
 
@@ -44,19 +45,42 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell : UITableViewCell
         
-        if indexPath.row == 0 {
      
-          cell =  tableView.dequeueReusableCell(withIdentifier: "StoriesCell", for: indexPath)
+        if indexPath.row == 0 {
+            
+        let cell = homeTableView.dequeueReusableCell(withIdentifier: "StoriesCell", for: indexPath) as! StoriesCell
+            cell.selectionStyle = .none
+            return cell
         }
+        
         else {
-          cell =  tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
-          
+      
+         let cell = homeTableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+            
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(postOwnerStackTapped))
+            
+            cell.postOwnerStack.addGestureRecognizer(tapGesture)
+            cell.selectionStyle = .none
+            return cell
         }
-        return cell
+        
+
+        
     
     }
+    
+    @objc func postOwnerStackTapped() {
+        
+     let vc = ProfileVC()
+        
+    navigationController?.pushViewController(vc, animated: true)
+    }
+    
+
+}
+
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -65,9 +89,10 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
         }
         else {
             return UITableView.automaticDimension
+          
         }
     }
     
     
    
-}
+

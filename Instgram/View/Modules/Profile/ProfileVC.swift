@@ -9,21 +9,49 @@ import UIKit
 
 class ProfileVC: NibVC {
 
+    @IBOutlet var galleryCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = "wallpapers4k"
+        setUpGalleryCollection()
     }
 
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+
+//MARK: COLLECTION EXTENSION FOR GALLERY
+extension ProfileVC : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
+  
+    
+    func setUpGalleryCollection(){
+        galleryCollectionView.delegate = self
+        galleryCollectionView.dataSource = self
+        
+        galleryCollectionView.register(UINib(nibName: "GalleryCell", bundle: nil), forCellWithReuseIdentifier: "GalleryCell")
+        
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCell", for: indexPath) as! GalleryCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
+        let itemWidth = (collectionView.frame.width - 2) / 3 
+        return CGSize(width: itemWidth, height: itemWidth)
+      
+    }
+    
+    
 }

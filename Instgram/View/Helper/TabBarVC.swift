@@ -41,17 +41,17 @@ class TabBarVC: UITabBarController {
         
         itemHome.tabBarItem = tabHome
         
-        // Profile
-        let itemProfile = NavBarVC(
-            rootViewController: ProfileVC())
+//        // Profile
+//        let itemProfile = NavBarVC(
+//            rootViewController: ProfileVC())
+//
+//        let tabProfile = UITabBarItem(
+//            title: "Profile",
+//            image: UIImage(named: "ic_profile"),
+//            selectedImage: UIImage(named: "ic_profile"))
+//
+//        itemProfile.tabBarItem = tabProfile
         
-        let tabProfile = UITabBarItem(
-            title: "Profile",
-            image: UIImage(named: "ic_profile"),
-            selectedImage: UIImage(named: "ic_profile"))
-        
-        itemProfile.tabBarItem = tabProfile
-        
-        viewControllers = [itemHome, itemProfile]
+        viewControllers = [itemHome]
     }
 }

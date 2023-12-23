@@ -20,12 +20,12 @@ class NavBarVC : UINavigationController {
     required init?(coder aDecoder: NSCoder) {
          super.init(coder: aDecoder)
         
-       setUpUI()
+       //setUpUI()
      }
      
      override func awakeFromNib() {
          super.awakeFromNib()
-      setUpUI()
+      //setUpUI()
      }
      
      override func viewDidLoad() {

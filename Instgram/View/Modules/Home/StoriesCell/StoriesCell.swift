@@ -36,7 +36,7 @@ extension StoriesCell : UICollectionViewDelegate , UICollectionViewDataSource , 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        3
+        9
        //storiesList.count
         
     }

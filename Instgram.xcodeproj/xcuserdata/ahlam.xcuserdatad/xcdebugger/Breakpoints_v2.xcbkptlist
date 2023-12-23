@@ -14,9 +14,9 @@
             filePath = "Instgram/View/Modules/Intro/IntroVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "signUpButtonDidPressed(_:)"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "createGoogleSignInConfig()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "Instgram/View/Modules/Intro/IntroVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "signInWithGoogle()"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "saveUserData(id:name:email:imageUrl:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -78,9 +78,9 @@
             filePath = "Instgram/View/Modules/Intro/IntroVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "signInWithGoogle()"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "saveUserData(id:name:email:imageUrl:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +94,9 @@
             filePath = "Instgram/View/Modules/Intro/IntroVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "signInWithGoogle()"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "saveUserData(id:name:email:imageUrl:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
