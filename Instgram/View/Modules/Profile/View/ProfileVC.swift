@@ -7,19 +7,31 @@
 
 import UIKit
 
+protocol ProfileVCProtocol {
+   
+}
+
 class ProfileVC: NibVC {
 
     @IBOutlet var galleryCollectionView: UICollectionView!
     
+    private var presenter: ProfilePresenterProtocol?
+   
+     override init() {
+         super.init()
+         presenter = ProfilePresenter(delegate: self)
+     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        self.title = "wallpapers4k"
+        setUpView()
         setUpGalleryCollection()
     }
-
-
+    
+    
+    func setUpView(){
+        self.title = "wallpapers4k"
+    }
 
 }
 
@@ -56,3 +68,10 @@ extension ProfileVC : UICollectionViewDelegate , UICollectionViewDataSource , UI
     
     
 }
+
+// MARK: - [Presenter] -> [View]
+
+extension ProfileVC: ProfileVCProtocol {
+    
+}
+
