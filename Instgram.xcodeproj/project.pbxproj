@@ -25,10 +25,10 @@
 		0C29CF252B35FA540022D550 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0C29CF242B35FA540022D550 /* FacebookLogin */; };
 		0C29CF272B35FA540022D550 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 0C29CF262B35FA540022D550 /* FacebookShare */; };
 		0C29CF2A2B35FC4D0022D550 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C29CF292B35FC4D0022D550 /* FirebaseAnalytics */; };
+		0C4046F72B409021005237D9 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4046F52B409020005237D9 /* EditProfileVC.swift */; };
+		0C4046F82B409021005237D9 /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4046F62B409020005237D9 /* EditProfileVC.xib */; };
 		0C48DD172B3710CA00874E56 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C48DD152B3710CA00874E56 /* GalleryCell.swift */; };
 		0C48DD182B3710CA00874E56 /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C48DD162B3710CA00874E56 /* GalleryCell.xib */; };
-		0C48DD1F2B372E6F00874E56 /* MyprofileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C48DD1D2B372E6F00874E56 /* MyprofileVC.swift */; };
-		0C48DD202B372E6F00874E56 /* MyprofileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C48DD1E2B372E6F00874E56 /* MyprofileVC.xib */; };
 		0CA983812B30CB42006E289B /* UIView + Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA983802B30CB42006E289B /* UIView + Corners.swift */; };
 		0CA983852B30CCF1006E289B /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA983832B30CCF1006E289B /* PostCell.swift */; };
 		0CA983862B30CCF1006E289B /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA983842B30CCF1006E289B /* PostCell.xib */; };
@@ -62,10 +62,10 @@
 		0C29CEF12B35D19D0022D550 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		0C29CEF22B35D19D0022D550 /* SignUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		0C29CEFA2B35DD7E0022D550 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Instgram/View/Resourses/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0C4046F52B409020005237D9 /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		0C4046F62B409020005237D9 /* EditProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileVC.xib; sourceTree = "<group>"; };
 		0C48DD152B3710CA00874E56 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
 		0C48DD162B3710CA00874E56 /* GalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
-		0C48DD1D2B372E6F00874E56 /* MyprofileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyprofileVC.swift; sourceTree = "<group>"; };
-		0C48DD1E2B372E6F00874E56 /* MyprofileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyprofileVC.xib; sourceTree = "<group>"; };
 		0CA983802B30CB42006E289B /* UIView + Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Corners.swift"; sourceTree = "<group>"; };
 		0CA983832B30CCF1006E289B /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		0CA983842B30CCF1006E289B /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
@@ -149,6 +149,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0C4046EF2B408F9D005237D9 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				0C4046F02B408FCF005237D9 /* View */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		0C4046F02B408FCF005237D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C4046F52B409020005237D9 /* EditProfileVC.swift */,
+				0C4046F62B409020005237D9 /* EditProfileVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0C48DD142B3710A300874E56 /* GalleryCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,15 +173,6 @@
 				0C48DD162B3710CA00874E56 /* GalleryCell.xib */,
 			);
 			path = GalleryCell;
-			sourceTree = "<group>";
-		};
-		0C48DD1C2B372E4E00874E56 /* MyProfile */ = {
-			isa = PBXGroup;
-			children = (
-				0C48DD1D2B372E6F00874E56 /* MyprofileVC.swift */,
-				0C48DD1E2B372E6F00874E56 /* MyprofileVC.xib */,
-			);
-			path = MyProfile;
 			sourceTree = "<group>";
 		};
 		0CA983822B30CCC3006E289B /* PostCell */ = {
@@ -247,7 +255,7 @@
 		0CE063BC2B278E5E002D50A8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0C48DD1C2B372E4E00874E56 /* MyProfile */,
+				0C4046EF2B408F9D005237D9 /* EditProfile */,
 				0CE063BD2B278E66002D50A8 /* Splash */,
 				0CE063BF2B278E86002D50A8 /* Intro */,
 				0C29CEF02B35D1310022D550 /* SignUp */,
@@ -431,10 +439,10 @@
 			files = (
 				0C48DD182B3710CA00874E56 /* GalleryCell.xib in Resources */,
 				0CA9838B2B30D2DE006E289B /* StoriesCell.xib in Resources */,
+				0C4046F82B409021005237D9 /* EditProfileVC.xib in Resources */,
 				0CDA5EC82B238A7A009DB729 /* LaunchScreen.storyboard in Resources */,
 				0C29CEF42B35D19D0022D550 /* SignUpVC.xib in Resources */,
 				0CDA5EDF2B239299009DB729 /* HomeVC.xib in Resources */,
-				0C48DD202B372E6F00874E56 /* MyprofileVC.xib in Resources */,
 				0CDA5ED72B238B11009DB729 /* SplashVC.xib in Resources */,
 				0C29CEFB2B35DD7E0022D550 /* GoogleService-Info.plist in Resources */,
 				0CA983862B30CCF1006E289B /* PostCell.xib in Resources */,
@@ -459,9 +467,9 @@
 				0CA9838E2B30D3DA006E289B /* Story.swift in Sources */,
 				0CDA5ED62B238B11009DB729 /* SplashVC.swift in Sources */,
 				0CDA5EDE2B239299009DB729 /* HomeVC.swift in Sources */,
-				0C48DD1F2B372E6F00874E56 /* MyprofileVC.swift in Sources */,
 				0CDA5EBC2B238A79009DB729 /* AppDelegate.swift in Sources */,
 				0CE063C12B278EF3002D50A8 /* RootRouter.swift in Sources */,
+				0C4046F72B409021005237D9 /* EditProfileVC.swift in Sources */,
 				0CDA5EBE2B238A79009DB729 /* SceneDelegate.swift in Sources */,
 				0CA9838A2B30D2DE006E289B /* StoriesCell.swift in Sources */,
 				0CA983902B30D5B2006E289B /* Post.swift in Sources */,

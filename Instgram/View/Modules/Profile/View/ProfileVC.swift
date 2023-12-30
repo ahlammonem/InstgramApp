@@ -13,6 +13,7 @@ protocol ProfileVCProtocol {
 
 class ProfileVC: NibVC {
 
+    
     @IBOutlet var galleryCollectionView: UICollectionView!
     
     private var presenter: ProfilePresenterProtocol?
@@ -32,7 +33,13 @@ class ProfileVC: NibVC {
     func setUpView(){
         self.title = "wallpapers4k"
     }
-
+    
+    
+    @IBAction func editProfileButtonDidPressed(_ sender: Any) {
+        let vc = EditProfileVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 
@@ -65,6 +72,8 @@ extension ProfileVC : UICollectionViewDelegate , UICollectionViewDataSource , UI
         return CGSize(width: itemWidth, height: itemWidth)
       
     }
+    
+    
     
     
 }

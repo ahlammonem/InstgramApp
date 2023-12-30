@@ -43,7 +43,7 @@ class TabBarVC: UITabBarController {
         
         // Profile
         let itemProfile = NavBarVC(
-            rootViewController: MyprofileVC())
+            rootViewController: ProfileVC())
 
         let tabProfile = UITabBarItem(
             title: "Profile",
