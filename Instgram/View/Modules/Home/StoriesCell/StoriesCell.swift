@@ -47,12 +47,31 @@ extension StoriesCell : UICollectionViewDelegate , UICollectionViewDataSource , 
         
         if indexPath.row == 0 {
             cell.addStoryView.isHidden = false
+            
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(addStory))
+            cell.addGestureRecognizer(tapGesture)
+           // cell.addStoryView.addGestureRecognizer(tapGesture)
         }
         else {
             cell.addStoryView.isHidden = true
         }
         return cell
     }
+    
+    @objc func addStory(){
+        print("add story pressed")
+        guard let topVC = UIApplication.getTopViewController() else { return }
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+           alert.addAction(UIAlertAction(title: "Open Photos", style: .default))
+           alert.addAction(UIAlertAction(title: "Open Camera", style: .default))
+           alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+       
+           topVC.present(alert, animated: true)
+         
+
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return .init(width: 88, height: 99)
@@ -68,3 +87,5 @@ extension StoriesCell : UICollectionViewDelegate , UICollectionViewDataSource , 
     
    
 }
+
+

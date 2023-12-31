@@ -16,5 +16,7 @@ class StoryCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    
 
 }

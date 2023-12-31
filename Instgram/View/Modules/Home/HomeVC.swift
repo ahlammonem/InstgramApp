@@ -44,11 +44,14 @@ class HomeVC: NibVC {
 }
 
 //MARK: TABLE EXTENSION FOR STORIES AND POSTS
-extension HomeVC : UITableViewDelegate , UITableViewDataSource {
+extension HomeVC : UITableViewDelegate , UITableViewDataSource  {
+   
+ 
     
     func setUpTable(){
         homeTableView.delegate = self
         homeTableView.dataSource = self
+
         
         homeTableView.register(UINib(nibName: "StoriesCell", bundle: nil), forCellReuseIdentifier: "StoriesCell")
         homeTableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
@@ -68,6 +71,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
             
         let cell = homeTableView.dequeueReusableCell(withIdentifier: "StoriesCell", for: indexPath) as! StoriesCell
             cell.selectionStyle = .none
+           
             return cell
         }
         
@@ -83,7 +87,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
         }
         
 
-        
+      
     
     }
     
