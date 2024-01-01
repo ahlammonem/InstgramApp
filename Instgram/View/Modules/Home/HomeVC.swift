@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FittedSheets
 
 class HomeVC: NibVC {
 
@@ -79,9 +80,9 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource  {
       
          let cell = homeTableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
             
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(postOwnerStackTapped))
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewCommentsTapped))
             
-            cell.postOwnerStack.addGestureRecognizer(tapGesture)
+            cell.viewCommentsButton.addGestureRecognizer(tapGesture)
             cell.selectionStyle = .none
             return cell
         }
@@ -91,11 +92,22 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource  {
     
     }
     
-    @objc func postOwnerStackTapped() {
+    @objc func viewCommentsTapped() {
+    
+      viewCommentsVc()
         
-     let vc = ProfileVC()
+    }
+    
+    func viewCommentsVc(){
         
-    navigationController?.pushViewController(vc, animated: true)
+        //Using fitted Sheet package
+        let vc = CommentsVC()
+        let options = SheetOptions( shrinkPresentingViewController: false)
+
+        let sheetController = SheetViewController(controller: vc , sizes: [.percent(0.50) , .percent(0.80) ] ,options: options)
+
+        self.present(sheetController, animated: true, completion: nil)
+        
     }
     
 

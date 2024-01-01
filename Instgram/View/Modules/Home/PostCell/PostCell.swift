@@ -9,6 +9,7 @@ import UIKit
 
 class PostCell: UITableViewCell {
 
+    @IBOutlet var viewCommentsButton: UIButton!
     @IBOutlet  var postOwnerStack: UIStackView!
     
     override func awakeFromNib() {

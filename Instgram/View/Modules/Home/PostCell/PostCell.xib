@@ -112,6 +112,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="postOwnerStack" destination="R0D-xi-rs0" id="05J-FX-Lpq"/>
+                <outlet property="viewCommentsButton" destination="I59-u1-b9s" id="bz4-ft-uku"/>
             </connections>
             <point key="canvasLocation" x="179" y="-1"/>
         </tableViewCell>
@@ -123,7 +124,7 @@
         <image name="post_image" width="375" height="375"/>
         <image name="userProfile_image" width="38" height="38"/>
         <namedColor name="gray">
-            <color red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.54100000858306885" green="0.54100000858306885" blue="0.54100000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
