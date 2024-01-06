@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FacebookLogin
 
 
 protocol IntroVCProtocol {
@@ -38,8 +39,32 @@ class IntroVC: NibVC {
     
     
     @IBAction private func loginWithFaceBookButtonDidPressed(_ sender: UIButton) {
-        self.presentHome()
+        
+        let loginManager = LoginManager()
+       
+      
+        loginManager.logIn(permissions: ["public_profile", "email"], from: self) { [weak self] (result, error) in
+            
+            // Check for error
+            guard error == nil else {
+                // Error occurred
+                print(error!.localizedDescription)
+                return
+            }
+            
+            // Check for cancel
+            guard let result = result, !result.isCancelled else {
+                print("User cancelled login")
+                return
+            }
+            
+            Profile.loadCurrentProfile { (profile, error) in
+                         print(profile)
+            }
+                  
+        }
     }
+    
     
     @IBAction private func loginWithGoogleDidPressed(_ sender: UIButton){
         presenter?.didPressedGoogle(in: self)

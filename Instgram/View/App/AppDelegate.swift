@@ -4,29 +4,52 @@
 //
 //  Created by ahlam on 08/12/2023.
 //
-
+import Foundation
 import UIKit
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
+import FacebookCore
+
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        FirebaseApp.configure()
-        return true
-    }
     
-    //TO ALLOW THE APP TO OPEN GOOGLE URL
-    func application(_ app: UIApplication,
-                     open url: URL,
-                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-      return GIDSignIn.sharedInstance.handle(url)
+func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+) -> Bool {
+    FirebaseApp.configure()
+    ApplicationDelegate.shared.application(
+        application,
+        didFinishLaunchingWithOptions: launchOptions
+    )
+
+    return true
+}
+     
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let sourceApplication = options[.sourceApplication] as? String {
+            // Check if the URL scheme is related to Google Sign-In
+            if url.scheme == "com.googleusercontent.apps.623440679460-50odlkju1ed0ed5etla0umclvp1doslm" {
+                return GIDSignIn.sharedInstance.handle(url)
+            } else {
+                // Handle other URL schemes here if needed
+                ApplicationDelegate.shared.application(
+                    app,
+                    open: url,
+                    sourceApplication: sourceApplication,
+                    annotation: options[.annotation]
+                )
+            }
+        }
+        return false
     }
+
+
+
+
 
     // MARK: UISceneSession Lifecycle
 
@@ -61,4 +84,5 @@ extension UIApplication {
         return base
     }
 }
+
 
