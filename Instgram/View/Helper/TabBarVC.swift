@@ -6,15 +6,6 @@
 //
 
 import Foundation
-
-
-//
-//  AppTabBarController.swift
-//  Instagram
-//
-//  Created by Mohamed Elbana on 04/12/2023.
-//
-
 import UIKit
 
 class TabBarVC: UITabBarController {
@@ -31,8 +22,7 @@ class TabBarVC: UITabBarController {
         super.viewWillAppear(animated)
         
         // Home
-        let itemHome = NavBarVC(
-            rootViewController: HomeVC())
+        let itemHome = HomeVC()
         
         let tabHome = UITabBarItem(
             title: "Home",
@@ -42,8 +32,7 @@ class TabBarVC: UITabBarController {
         itemHome.tabBarItem = tabHome
         
         // Profile
-        let itemProfile = NavBarVC(
-            rootViewController: ProfileVC())
+        let itemProfile = ProfileVC()
 
         let tabProfile = UITabBarItem(
             title: "Profile",

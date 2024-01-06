@@ -31,7 +31,7 @@ class ProfileVC: NibVC {
     
     
     func setUpView(){
-        self.title = "wallpapers4k"
+        self.title = "Profile"
     }
     
     

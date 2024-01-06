@@ -59,16 +59,29 @@ extension StoriesCell : UICollectionViewDelegate , UICollectionViewDataSource , 
     }
     
     @objc func addStory(){
-        print("add story pressed")
+      print("add story pressed")
+      showImagePickerBottomSheet()
+    }
+    
+    func showImagePickerBottomSheet(){
         guard let topVC = UIApplication.getTopViewController() else { return }
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-           alert.addAction(UIAlertAction(title: "Open Photos", style: .default))
-           alert.addAction(UIAlertAction(title: "Open Camera", style: .default))
-           alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-       
-           topVC.present(alert, animated: true)
-         
+        
+        let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let photosButton = UIAlertAction(title: "Open Photos", style: .default , handler: { action in
+            topVC.openCameraGallery(sourceType: .photoLibrary)
+        })
+        let cameraButton = UIAlertAction(title: "Open Photos", style: .default , handler: { action in
+            topVC.openCameraGallery(sourceType: .photoLibrary)
+        })
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
 
+
+        sheet.addAction(photosButton)
+        sheet.addAction(cameraButton)
+        sheet.addAction(cancelButton)
+        
+        topVC.present(sheet, animated: true)
     }
     
     
@@ -78,10 +91,11 @@ extension StoriesCell : UICollectionViewDelegate , UICollectionViewDataSource , 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 0,
-                     left: 4.5,
+        let padding = 4.5
+        return UIEdgeInsets(top: 0,
+                     left: padding,
                      bottom: 0,
-                     right: 4.5)
+                     right: padding)
     }
     
     
