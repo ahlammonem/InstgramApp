@@ -8,22 +8,22 @@
 import Foundation
 import UIKit
 
-extension UIViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
-    
-
-    
-    func openCameraGallery(sourceType :  UIImagePickerController.SourceType){
-            if  UIImagePickerController.isSourceTypeAvailable(sourceType) {
-                
-                let imagePicker = UIImagePickerController()
-            
-                print("Button capture")
-                imagePicker.delegate = self
-                imagePicker.sourceType = sourceType
-                imagePicker.allowsEditing = false
-                present(imagePicker, animated: true, completion: nil)
-                
-            }
-        }
-    
-}
+//extension UIViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
+//    
+//
+//    
+//    func openCameraGallery(sourceType :  UIImagePickerController.SourceType){
+//            if  UIImagePickerController.isSourceTypeAvailable(sourceType) {
+//                
+//                let imagePicker = UIImagePickerController()
+//            
+//                print("Button capture")
+//                imagePicker.delegate = self
+//                imagePicker.sourceType = sourceType
+//                imagePicker.allowsEditing = false
+//                present(imagePicker, animated: true, completion: nil)
+//                
+//            }
+//        }
+//    
+//}

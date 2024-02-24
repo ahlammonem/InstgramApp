@@ -14,8 +14,8 @@ class RootRouter {
     static func presentRootScreen(with root: UIViewController) {
         let window = UIApplication.shared.windows.filter { $0.isKeyWindow }.first
         window?.makeKeyAndVisible()
-        let navigation = NavBarVC(rootViewController: root)
-          window?.rootViewController = navigation
+       // let navigation = NavBarVC(rootViewController: root)
+          window?.rootViewController = root
     }
     
  

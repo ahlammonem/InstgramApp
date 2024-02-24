@@ -22,7 +22,7 @@ class TabBarVC: UITabBarController {
         super.viewWillAppear(animated)
         
         // Home
-        let itemHome = HomeVC()
+        let itemHome = NavBarVC(rootViewController: HomeVC())
         
         let tabHome = UITabBarItem(
             title: "Home",
@@ -32,7 +32,7 @@ class TabBarVC: UITabBarController {
         itemHome.tabBarItem = tabHome
         
         // Profile
-        let itemProfile = ProfileVC()
+        let itemProfile = NavBarVC(rootViewController: ProfileVC())
 
         let tabProfile = UITabBarItem(
             title: "Profile",

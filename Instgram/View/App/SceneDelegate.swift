@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
          window?.windowScene = windowScene
          window?.makeKeyAndVisible()
          let vc = SplashVC()
-         window?.rootViewController = NavBarVC(rootViewController: vc)
+         window?.rootViewController = vc
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

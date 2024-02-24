@@ -1,28 +1,29 @@
 //
-//  IntroPresenter.swift
+//  SignUpPresenter.swift
 //  Instgram
 //
-//  Created by ahlam on 24/12/2023.
+//  Created by ahlam on 26/01/2024.
 //
 
 import Foundation
 import UIKit
 
 
-protocol IntroPresenterProtocol {
+protocol SignUpPresenterProtocol {
     
     func viewDidLoad()
     func didPressedGoogle(in view: UIViewController)
     func disPressedFacebook(in view : UIViewController)
+
 }
 
-class IntroPresenter : NSObject {
+class SignUpPresenter : NSObject {
     
     private var repo: AuthRepo
-    private var delegate: IntroVCProtocol?
+    private var delegate: SignUpVCProtocol?
     
     
-    init(delegate: IntroVCProtocol?) {
+    init(delegate: SignUpVCProtocol?) {
         self.delegate = delegate
         repo = AuthRepo()
 
@@ -34,9 +35,8 @@ class IntroPresenter : NSObject {
 
 // MARK: - [View] -> [Presenter]
 
-extension IntroPresenter: IntroPresenterProtocol {
-   
-
+extension SignUpPresenter: SignUpPresenterProtocol {
+    
     func viewDidLoad() {
         repo.setupGoogleAuth()
     }
@@ -46,6 +46,7 @@ extension IntroPresenter: IntroPresenterProtocol {
             self.delegate?.didSignedUser()
         })
     }
+    
     func disPressedFacebook(in view: UIViewController) {
         repo.signInFacebook(in: view) {
             self.delegate?.didSignedUser()

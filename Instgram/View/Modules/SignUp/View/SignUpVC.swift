@@ -1,67 +1,55 @@
 //
-//  IntroVC.swift
+//  SignUpVC.swift
 //  Instgram
 //
-//  Created by ahlam on 08/12/2023.
+//  Created by ahlam on 22/12/2023.
 //
 
 import UIKit
 
 
-
-protocol IntroVCProtocol {
+protocol SignUpVCProtocol {
     func didSignedUser()
 }
 
-class IntroVC: NibVC {
-  
-   private var presenter: IntroPresenterProtocol?
-  
-    override init() {
-        super.init()
-        presenter = IntroPresenter(delegate: self)
-    }
+class SignUpVC: NibVC {
     
-    //MARK: LIFECYCLE
+    private var presenter: SignUpPresenterProtocol?
+    
+      override init() {
+          super.init()
+          presenter = SignUpPresenter(delegate: self)
+      }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = "Sign Up"
+       
         
-        presenter?.viewDidLoad()
-        //self.createGoogleSignInConfig()
     }
     
-    
-    //MARK: BUTTONS CLICKS
-    @IBAction private func signUpButtonDidPressed(_ sender: UIButton) {
-        let vc = SignUpVC()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    
+  
+
     @IBAction private func loginWithFaceBookButtonDidPressed(_ sender: UIButton) {
         
         presenter?.disPressedFacebook(in: self)
     }
     
-    
     @IBAction private func loginWithGoogleDidPressed(_ sender: UIButton){
         presenter?.didPressedGoogle(in: self)
     }
-    
-    
     
     private func presentHome() {
         let tabBar = TabBarVC()
         RootRouter.presentRootScreen(with: tabBar)
      }
-    
-    
-}
 
+}
 
 // MARK: - [Presenter] -> [View]
 
-extension IntroVC: IntroVCProtocol {
+extension SignUpVC: SignUpVCProtocol {
     
     func didSignedUser() {
         presentHome()

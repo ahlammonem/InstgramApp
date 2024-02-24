@@ -60,29 +60,12 @@ extension StoriesCell : UICollectionViewDelegate , UICollectionViewDataSource , 
     
     @objc func addStory(){
       print("add story pressed")
-      showImagePickerBottomSheet()
+        guard let topVC = UIApplication.getTopViewController() else { return }
+
+        //topVC.showImagePickerBottomSheet()
     }
     
-    func showImagePickerBottomSheet(){
-        guard let topVC = UIApplication.getTopViewController() else { return }
-        
-        let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let photosButton = UIAlertAction(title: "Open Photos", style: .default , handler: { action in
-            topVC.openCameraGallery(sourceType: .photoLibrary)
-        })
-        let cameraButton = UIAlertAction(title: "Open Photos", style: .default , handler: { action in
-            topVC.openCameraGallery(sourceType: .photoLibrary)
-        })
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
-
-
-        sheet.addAction(photosButton)
-        sheet.addAction(cameraButton)
-        sheet.addAction(cancelButton)
-        
-        topVC.present(sheet, animated: true)
-    }
+  
     
     
     
